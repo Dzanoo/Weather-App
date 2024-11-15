@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pogoda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="all">
+        <div id="searchbar">
+            <input type="text" id="locationInput" placeholder="Search here...">
+            <button id="searchButton" onclick="showBox()">Search</button>
+        </div>
+        <div id="container">
+            <div class="loc"></div>
+            <div id="location"></div>
+            <div class="main">
+                <div class="image"></div>
+                <div class="temp">
+                    <div id="icon"></div>
+                    <span id="temperature"></span><span id="degrees">°C</span>
+                    <div class="data">
+                        <div class="text"></div>
+                        <div id="day"></div>
+                        <div id="description"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="different">
+                <div class="icon-text">
+                    <img src="icons/humidity-icon.png" alt="Rain Icon">
+                    <div id="humidity"></div>
+                </div>
+                <div class="icon-text">
+                    <img src="icons/wind-icon.png" alt="Wind Icon">
+                    <div id="windSpeed"></div>
+                </div>
+                <div class="icon-text">
+                    <img src="icons/pressure-icon.png" alt="Pressure Icon">
+                    <div id="pressure"></div>
+                </div>
+            </div>
+            <div class="air_pollution">
+                <div id="co">
+                    <label id="colabel" for="cometer"></label>
+                    <meter id="cometer" value="0" min="0" max="15400" low="9400" high="12400"></meter>
+                </div>
+                <div id="no">
+                    <label id="nolabel" for="nometer"></label>
+                    <meter id="nometer" value="0" min="0" max="100" low="30" high="70"></meter>
+                </div>
+                <div id="no2">
+                    <label id="no2label" for="no2meter"></label>
+                    <meter id="no2meter" value="0" min="0" max="200" low="70" high="150"></meter>
+                </div>
+                <div id="o3">
+                    <label id="o3label" for="o3meter"></label>
+                    <meter id="o3meter" value="0" min="0" max="180" low="100" high="140"></meter>
+                </div>
+                <div id="so2">
+                    <label id="so2label" for="so2meter"></label>
+                    <meter id="so2ometer" value="0" min="0" max="350" low="80" high="250"></meter>
+                </div>
+                <div id="pm2_5">
+                    <label id="pm2_5label" for="pm2_5meter"></label>
+                    <meter id="pm2_5meter" value="0" min="0" max="75" low="25" high="50"></meter>
+                </div>
+                <div id="pm10">
+                    <label id="pm10label" for="pm10"></label>
+                    <meter id="pm10meter" value="0" min="0" max="200" low="50" high="100"></meter>
+                </div>
+                <div id="nh3">
+                    <label id="nh3label" for="nh3"></label>
+                    <meter id="nh3meter" value="0" min="0" max="200" low="70" high="100"></meter>
+                </div>
+                <div id="aqi"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Widget z wykresami itp-->
+    <div id="openweathermap-widget-11"></div>
+
+    <script src="script.js"></script>
+    <script src='//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script>
+    <div id="widgetGenerator"></div>
+</body>
+
+</html>

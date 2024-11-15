@@ -1,0 +1,216 @@
+    body {
+        background:
+            radial-gradient(circle at 30% 40%, #00CC99 0%, transparent 60%),
+            radial-gradient(circle at 5% 10%, #6600FF 0%, transparent 60%),
+            radial-gradient(circle at 95% 80%, #00CC99 0%, transparent 60%),
+            radial-gradient(circle at 65% 30%, #00CC99 0%, transparent 60%),
+            radial-gradient(circle at 40% 5%, #6600FF 0%, transparent 60%),
+            radial-gradient(circle at 25% 75%, #00CC99 0%, transparent 60%);
+        background-blend-mode: screen;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        min-height: 100vh;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: sans-serif;
+    }
+
+    .all {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #searchbar {
+        width: 90%;
+        background-color: rgba(240, 248, 255, 0.5);
+        border: 2px solid aliceblue;
+        border-radius: 20px;
+        padding: 0.8rem;
+        margin-top: 23rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #location {
+        font-size: x-large;
+        font-weight: bolder;
+    }
+
+    #locationInput,
+    #searchButton {
+        flex: 1;
+        background-color: #fff;
+        border: none;
+        padding: 0.5rem;
+        border-radius: 5px;
+    }
+
+    #searchButton {
+        margin-left: 0.5rem;
+    }
+
+    #container {
+        width: 100%;
+        background-color: rgba(240, 248, 255, 0.8);
+        border: 3px solid aliceblue;
+        border-radius: 20px;
+        padding: 1rem;
+        margin-top: 1rem;
+        display: none;
+        justify-content: center;
+    }
+
+    #description:first-letter {
+        text-transform: uppercase;
+    }
+
+    .main {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .loc {
+        color: gray;
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .temp {
+        width: 100%;
+        background-color: rgb(0, 195, 255);
+        border-radius: 12px;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        justify-content: space-between;
+    }
+
+    #icon {
+        flex: 1;
+        max-width: 60px;
+        overflow: hidden;
+    }
+
+    #icon img {
+        width: 100%;
+        height: auto;
+    }
+
+    #temperature {
+        font-size: 2rem;
+        color: #fff;
+    }
+
+    #degrees {
+        font-size: 1.2rem;
+        color: #fff;
+    }
+
+    .data {
+        text-align: right;
+        flex: 1;
+        font-size: 0.8rem;
+    }
+
+    .text {
+        color: rgb(93, 99, 105);
+        font-size: 1rem;
+    }
+
+    #day,
+    #description {
+        font-weight: bold;
+    }
+
+    .different {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .icon-text {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .icon-text img {
+        width: 20px;
+        height: auto;
+    }
+
+    .air_pollution {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-top: 7%;
+        border: 1px solid #fff;
+        padding: 1rem;
+        border-radius: 2rem;
+    }
+
+    .air_pollution>div {
+        flex: 1 1 calc(50% - 0.5rem);
+        text-align: center;
+    }
+
+    @media screen and (min-width: 768px) {
+        body {
+            padding: 2rem;
+        }
+
+        #searchbar {
+            width: 50%;
+            max-width: none;
+        }
+
+        #container {
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .loc {
+            font-size: 1.2rem;
+        }
+
+        #temperature {
+            font-size: 3rem;
+        }
+
+        #degrees {
+            font-size: 1.5rem;
+        }
+
+        .data {
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        body {
+            background-size: 200%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        body {
+            background-size: 300%;
+        }
+
+        .searchbar {
+            width: 100%;
+        }
+    }
